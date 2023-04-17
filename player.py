@@ -3,7 +3,7 @@ from laser import Laser
 
 class Player(pygame.sprite.Sprite):
     
-    def __init__(self,pos,constraint,speed ):
+    def __init__(self,pos,constraint,speed):
         super().__init__()
 
         self.image = pygame.image.load('./graphics/player.png').convert_alpha()
@@ -37,7 +37,7 @@ class Player(pygame.sprite.Sprite):
                 self.ready = True
 
     def shoot_laser(self):
-        self.lasers.add(Laser(self.rect.center))
+        self.lasers.add(Laser(self.rect.center,-8,self.rect.bottom))
 
     def constraint(self):
 
